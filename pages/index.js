@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function Home() {
     return ( <div>
-            <h4> Home</h4>
+            <h4> Bem vindo à página de contagem!</h4>
             <Contador />
         </div>
     )
@@ -23,10 +23,15 @@ function Contador() {
         setContador(contador + 1);
     }
 
+    function removerContador() {
+        setContador(contador -1);
+    }
+
     return (
         <div>
             <div>{contador}</div>
             <button onClick={adicionarContador}>Adicionar</button>
+            <button onClick={removerContador}>Remover</button>
         </div>
     )
 }
